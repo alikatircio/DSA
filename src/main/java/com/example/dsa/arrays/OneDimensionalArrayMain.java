@@ -1,6 +1,6 @@
 package com.example.dsa.arrays;
 
-public class Main {
+public class OneDimensionalArrayMain {
 
     public static void main(String[] args) {
 
