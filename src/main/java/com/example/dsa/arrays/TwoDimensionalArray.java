@@ -92,4 +92,21 @@ public class TwoDimensionalArray {
         }
     }
 
+    /**
+     * Traverse 2D Array
+     * Time Complexity O(mn)
+     * Space Complexity O(1)
+     */
+    public void traverse2DArray() {
+
+        for (int row = 0; row < arr.length; row++){ //O(m)
+
+            for (int col = 0; col < arr.length; col++) { //O(n)
+
+                System.out.print(arr[row][col] + " "); //O(1)
+            }
+            System.out.println(); //O(1)
+        }
+    }
+
 }

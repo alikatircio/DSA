@@ -12,7 +12,10 @@ public class TwoDimensionArrayMain {
         tda.insert(0,0 ,10);
         tda.insert(0,0 ,20);
         tda.insert(0,1 ,20);
+        tda.insert(1,0 ,30);
+        tda.insert(2,1 ,40);
         System.out.println(Arrays.deepToString(tda.arr));
         tda.accessCell(0,1);
+        tda.traverse2DArray();
     }
 }
