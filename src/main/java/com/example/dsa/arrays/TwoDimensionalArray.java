@@ -17,12 +17,12 @@ public class TwoDimensionalArray {
      * Time Complexity all together O(1)
      * Time Complexity step by step O(mn)
      */
-    public void creatingTwoDimensionalArray () {
+    public void creatingTwoDimensionalArray() {
         /*
-        * Step 1 - Declare
-        * Step 2 - Instantiate
-        * Step 3 - Initialize
-        * */
+         * Step 1 - Declare
+         * Step 2 - Instantiate
+         * Step 3 - Initialize
+         * */
         int[][] int2DArray; //O(1)
         int2DArray = new int[2][2]; //O(1)
         int2DArray[0][0] = 1; //O(1)
@@ -35,17 +35,19 @@ public class TwoDimensionalArray {
         String[][] string2DArray = {{"a", "b"}, {"c", "d"}}; //O(1)
         System.out.println(Arrays.deepToString(string2DArray));
     }
+
     int[][] arr = null;
 
     /**
      * Constructor
-     * @param numberOfRows size of row
+     *
+     * @param numberOfRows    size of row
      * @param numberOfColumns size of column
      */
     public TwoDimensionalArray(int numberOfRows, int numberOfColumns) {
         this.arr = new int[numberOfRows][numberOfColumns];
-        for (int row = 0; row < numberOfRows; row++){
-            for (int col = 0; col < numberOfColumns; col++){
+        for (int row = 0; row < numberOfRows; row++) {
+            for (int col = 0; col < numberOfColumns; col++) {
 
                 arr[row][col] = Integer.MIN_VALUE;
             }
@@ -56,21 +58,22 @@ public class TwoDimensionalArray {
      * Inserting value in the array
      * Time Complexity O(1)
      * Space Complexity O(1)
-     * @param row row index
-     * @param col row column
+     *
+     * @param row   row index
+     * @param col   row column
      * @param value insert value
      */
     public void insert(int row, int col, int value) {
 
         try {
 
-            if (arr[row][col] == Integer.MIN_VALUE){  //O(1)
+            if (arr[row][col] == Integer.MIN_VALUE) {  //O(1)
 
                 arr[row][col] = value; //O(1)
                 System.out.println("The value inserted"); //O(1)
             } else
                 System.out.println("This cell is already occupied!"); //O(1)
-        }catch (ArrayIndexOutOfBoundsException e) {
+        } catch (ArrayIndexOutOfBoundsException e) {
 
             System.out.println("Invalid index for 2D array!"); //O(1)
         }
@@ -80,14 +83,15 @@ public class TwoDimensionalArray {
      * Accessing cell value from given array
      * Time Complexity O(1)
      * Space Complexity O(1)
+     *
      * @param row index
      * @param col index
      */
     public void accessCell(int row, int col) {
-        System.out.println("\nAccesing Row#"+ row + ", Col#"+col); //O(1)
+        System.out.println("\nAccesing Row#" + row + ", Col#" + col); //O(1)
         try {
-            System.out.println("Cell value: "+ arr[row][col]); //O(1)
-        }catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Cell value: " + arr[row][col]); //O(1)
+        } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("Invalid index for 2D array!"); //O(1)
         }
     }
@@ -99,7 +103,7 @@ public class TwoDimensionalArray {
      */
     public void traverse2DArray() {
 
-        for (int row = 0; row < arr.length; row++){ //O(m)
+        for (int row = 0; row < arr.length; row++) { //O(m)
 
             for (int col = 0; col < arr.length; col++) { //O(n)
 
@@ -111,23 +115,43 @@ public class TwoDimensionalArray {
 
     /**
      * Search a single value in 2D array
-     * @param value search
      * Time Complexity O(mn)
      * Space Complexity O(1)
+     * @param value search
      */
-    public void searchValueIn2DArray (int value) {
+    public void searchValueIn2DArray(int value) {
 
-        for (int row = 0; row < arr.length; row++){ //O(m)
+        for (int row = 0; row < arr.length; row++) { //O(m)
 
             for (int col = 0; col < arr.length; col++) { //O(n)
 
                 if (arr[row][col] == value) { //O(1)
 
-                    System.out.println("The value "+value+" found at row:" + row + " col:"+col); //O(1)
+                    System.out.println("The value " + value + " found at row:" + row + " col:" + col); //O(1)
                     return;
                 }
             }
         }
-        System.out.println("The value "+value+" not found!"); //O(1)
+        System.out.println("The value " + value + " not found!"); //O(1)
+    }
+
+    /**
+     * Delete value in 2D array
+     * Time Complexity O(1)
+     * Space Complexity O(1)
+     * @param row index
+     * @param col index
+     */
+    public void deleteValue(int row, int col) {
+
+        try {
+
+            this.arr[row][col] = Integer.MIN_VALUE; // O(1)
+            System.out.println("The value has been deleted successfully!"); // O(1)
+
+        } catch (ArrayIndexOutOfBoundsException e) {
+
+            System.out.println("The value that is provided is not in the range of array!"); // O(1)
+        }
     }
 }

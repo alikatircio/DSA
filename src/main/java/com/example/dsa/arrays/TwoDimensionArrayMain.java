@@ -19,5 +19,8 @@ public class TwoDimensionArrayMain {
         tda.traverse2DArray();
         tda.searchValueIn2DArray(30);
         tda.searchValueIn2DArray(120);
+        tda.deleteValue(1,0);
+        tda.deleteValue(1,3);
+        System.out.println(Arrays.deepToString(tda.arr));
     }
 }
