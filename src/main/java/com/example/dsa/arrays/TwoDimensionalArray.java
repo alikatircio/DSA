@@ -109,4 +109,25 @@ public class TwoDimensionalArray {
         }
     }
 
+    /**
+     * Search a single value in 2D array
+     * @param value search
+     * Time Complexity O(mn)
+     * Space Complexity O(1)
+     */
+    public void searchValueIn2DArray (int value) {
+
+        for (int row = 0; row < arr.length; row++){ //O(m)
+
+            for (int col = 0; col < arr.length; col++) { //O(n)
+
+                if (arr[row][col] == value) { //O(1)
+
+                    System.out.println("The value "+value+" found at row:" + row + " col:"+col); //O(1)
+                    return;
+                }
+            }
+        }
+        System.out.println("The value "+value+" not found!"); //O(1)
+    }
 }

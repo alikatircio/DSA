@@ -17,5 +17,7 @@ public class TwoDimensionArrayMain {
         System.out.println(Arrays.deepToString(tda.arr));
         tda.accessCell(0,1);
         tda.traverse2DArray();
+        tda.searchValueIn2DArray(30);
+        tda.searchValueIn2DArray(120);
     }
 }
