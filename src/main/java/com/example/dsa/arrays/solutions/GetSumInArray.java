@@ -1,4 +1,4 @@
-package com.example.dsa.arrays;
+package com.example.dsa.arrays.solutions;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
