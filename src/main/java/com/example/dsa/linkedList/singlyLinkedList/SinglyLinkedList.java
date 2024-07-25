@@ -155,7 +155,16 @@ public class SinglyLinkedList {
             tempNode.next = tempNode.next.next; //O(1)
             size--; //O(1)
         }
+    }
 
+    /**
+     * Time Complexity O(1)
+     * Space Complexity O(1)
+     */
+    public void deleteSinglyLinkedList() {
 
+        head = null; //O(1);
+        tail = null; //O(1);
+        System.out.println("Singly linked list deleted successfully."); //O(1);
     }
 }

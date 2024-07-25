@@ -23,5 +23,8 @@ public class Main {
         singlyLinkedList.searchSinglyLinkedList(9);
         singlyLinkedList.deleteNode(3);
         singlyLinkedList.traverseSinglyLinkedList();
+        singlyLinkedList.deleteSinglyLinkedList();
+        singlyLinkedList.traverseSinglyLinkedList();
+
     }
 }
